@@ -8,14 +8,14 @@ import { getFunctions } from 'firebase/functions';
 // Firebase configuration
 // NOTE: Replace these with your own Firebase project config values
 const firebaseConfig = {
-    apiKey: "AIzaSyDO-powe_hcrHTSqM5pX-1_QP6JRmRgGrc",
-    authDomain: "huddleai-a812c.firebaseapp.com",
-    projectId: "huddleai-a812c",
-    storageBucket: "huddleai-a812c.firebasestorage.app",
-    messagingSenderId: "785097766884",
-    appId: "1:785097766884:web:cd6a17305b95d536d1f9f1",
-    measurementId: "G-2458RJVZ5W"
-  };
+  apiKey: "AIzaSyBsLHBhu-66FhLoU9vj92Bcswcevx9bMms",
+  authDomain: "huddleai-a812c.firebaseapp.com",
+  projectId: "huddleai-a812c",
+  storageBucket: "huddleai-a812c.firebasestorage.app",
+  messagingSenderId: "785097766884",
+  appId: "1:785097766884:web:565f5673335410add1f9f1",
+  measurementId: "G-D32VHHW8EG"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
