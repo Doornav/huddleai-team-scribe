@@ -1,73 +1,159 @@
-# Welcome to your Lovable project
+# HuddleAI - AI-Powered Meeting Assistant
 
-## Project info
+HuddleAI is an intelligent meeting assistant that automatically processes, transcribes, and summarizes your team meetings, making them more productive and actionable.
 
-**URL**: https://lovable.dev/projects/2f315bd3-0c0a-4686-9528-59df8c0f60f7
+## 🌟 Key Features
 
-## How can I edit this code?
+### 🎥 Automatic Meeting Processing
+- Upload meeting recordings (up to 1GB)
+- Automatic audio extraction and processing
+- Speech-to-text conversion with speaker identification
+- AI-powered meeting summarization
+- Action item extraction and tracking
 
-There are several ways of editing your application.
+### 📝 Smart Summaries
+- Comprehensive meeting summaries
+- Key topics discussed
+- Action items with assignments
+- Important decisions made
+- Follow-up questions and next steps
 
-**Use Lovable**
+### 🔄 Slack Integration
+- Automatic notifications when meetings are processed
+- Rich message format with meeting details
+- Direct links to full meeting information
+- Customizable notification settings
+- Team-specific channel configuration
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2f315bd3-0c0a-4686-9528-59df8c0f60f7) and start prompting.
+### 👥 Team Collaboration
+- Team-based workspace organization
+- Member management and permissions
+- Shared meeting history
+- Collaborative action item tracking
+- Team-specific settings and integrations
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js & npm installed
+- Google Cloud account (for deployment)
+- Firebase account (for hosting)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd huddleai
+```
 
-Follow these steps:
+2. Install dependencies:
+```bash
+npm install
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Set up environment variables:
+Create a `.env` file in the root directory with your Firebase configuration:
+```
+VITE_FIREBASE_API_KEY=your-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+VITE_FIREBASE_APP_ID=your-app-id
+VITE_FIREBASE_MEASUREMENT_ID=your-measurement-id
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Technical Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Frontend**: React, TypeScript, Tailwind CSS, shadcn-ui
+- **Backend**: Firebase Cloud Functions
+- **Database**: Firestore
+- **Storage**: Firebase Storage
+- **Authentication**: Firebase Auth
+- **AI/ML**: Google Cloud Speech-to-Text, OpenAI GPT-4
 
-**Use GitHub Codespaces**
+## 🔧 Cloud Functions Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The application uses Google Cloud Functions for processing meeting recordings. To set up:
 
-## What technologies are used for this project?
+1. Enable required APIs in Google Cloud Console:
+   - Cloud Functions API
+   - Speech-to-Text API
+   - Firebase Storage API
+   - Firestore API
 
-This project is built with:
+2. Deploy functions:
+```bash
+cd functions
+npm install
+npm run build
+firebase deploy --only functions
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📱 Features in Detail
 
-## How can I deploy this project?
+### Meeting Processing
+- Supports video files up to 1GB
+- Automatic audio extraction using FFmpeg
+- Speaker diarization for multiple participants
+- Intelligent summarization using GPT-4
+- Action item extraction and assignment
 
-Simply open [Lovable](https://lovable.dev/projects/2f315bd3-0c0a-4686-9528-59df8c0f60f7) and click on Share -> Publish.
+### Slack Integration
+- Automatic meeting notifications
+- Rich message formatting
+- Customizable notification settings
+- Team-specific channel configuration
+- Test message functionality
 
-## Can I connect a custom domain to my Lovable project?
+### User Management
+- Email/password authentication
+- Team creation and management
+- Member invitations and permissions
+- Profile management
+- Secure access control
 
-Yes, you can!
+## 🔒 Security
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Firebase Authentication for user management
+- Secure storage of API keys and credentials
+- Role-based access control
+- Secure file uploads and processing
+- Protected API endpoints
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🚀 Deployment
+
+1. Build the application:
+```bash
+npm run build
+```
+
+2. Deploy to Firebase:
+```bash
+firebase deploy
+```
+
+## 📚 Documentation
+
+For detailed documentation on specific features:
+- [Cloud Functions Setup](functions/README.md)
+- [Slack Integration](SLACK_INTEGRATION_README.md)
+- [Firebase Authentication](src/docs/FirebaseAuth.md)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Support
+
+For support, please contact the HuddleAI team or create an issue in the project repository.
